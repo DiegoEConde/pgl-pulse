@@ -1,5 +1,5 @@
 // DATOS DE NAVEGACIÓN
-const navigationItems = [
+const NAVIGATION_ITEMS = [
   "Inicio",
   "Compras",
   "Ventas",
@@ -13,7 +13,7 @@ const navigationItems = [
 export default function Navigation() {
   return (
     <nav className="navigation">
-      {navigationItems.map((item) => (
+      {NAVIGATION_ITEMS.map((item) => (
         <div
           key={item}
           className="navigation-item"

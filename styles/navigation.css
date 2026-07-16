@@ -1,6 +1,6 @@
 /*BARRA DE NAVEGACIÓN*/
 .navigation {
-    height: 60px;
+    height: var(--navigation-height);
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -20,7 +20,7 @@
     background: transparent;
     cursor: pointer;
     font-size: 14px;
-    transition: background .2s;
+    transition: background var(--transition-fast);
 }
 
 .navigation-button:hover {
