@@ -1,3 +1,5 @@
+import { navigationItems } from "@/config/navigation";
+
 // DATOS DE NAVEGACIÓN
 const NAVIGATION_ITEMS = [
   "Inicio",
