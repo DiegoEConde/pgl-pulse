@@ -1,3 +1,7 @@
+// componente que organiza el área principal de trabajo
+
+import AlertCenter from "../AlertCenter/AlertCenter";
+
 type WorkspaceProps = {
   children: React.ReactNode;
 };
@@ -5,7 +9,11 @@ type WorkspaceProps = {
 export default function Workspace({ children }: WorkspaceProps) {
   return (
     <main className="workspace">
-      {children}
+      <section className="workspace-content">
+        {children}
+      </section>
+
+      <AlertCenter />
     </main>
   );
 }

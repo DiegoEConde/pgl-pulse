@@ -4,33 +4,24 @@
 ============================================================ */
 
 :root {
-
     /* ---------- Colores ---------- */
-
     --color-background: #f4f6f8;
     --color-surface: #ffffff;
-
-    --color-border: var(--color-border);
-
+    --color-border: #d9dee5;
     --color-text: #202124;
     --color-text-secondary: #6b7280;
-
     --color-primary: #0b74ff;
 
     /* ---------- Layout ---------- */
-
     --header-height: 90px;
-
-    --navigation-width: 250px;
+    --navigation-height: 50px;
+    --alert-center-width: 280px;
 
     /* ---------- Bordes ---------- */
-
     --radius-small: 6px;
     --radius-medium: 10px;
 
     /* ---------- Sombras ---------- */
-
     --shadow-default:
         0 2px 6px rgba(0,0,0,.08);
-
 }
