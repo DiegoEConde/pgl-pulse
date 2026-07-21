@@ -1,0 +1,57 @@
+/* ============================================================
+   STAT CARD
+---------------------------------------------------------------
+   Tarjeta utilizada para mostrar indicadores principales
+   del Dashboard.
+============================================================ */
+
+/* ============================================================
+   Contenedor principal
+============================================================ */
+
+.stat-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:var(--stat-card-height);
+    gap:var(--space-sm);
+    padding:var(--space-lg);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.025) 0%,
+            rgba(255,255,255,0) 100%
+        ),
+        var(--color-surface);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-xl);
+    box-shadow:var(--shadow-elevation-1);
+    transition:var(--transition-default);
+}
+
+.stat-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(74,138,255,.28);
+}
+
+/* ============================================================
+   Título
+============================================================ */
+
+.stat-card-title{
+    color:var(--color-text-secondary);
+    font-size:var(--font-size-lg);
+    font-weight:600;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+}
+
+/* ============================================================
+   Valor
+============================================================ */
+
+.stat-card-value{
+    color:var(--color-text);
+    font-size:var(--font-size-3xl);
+    font-weight:700;
+}

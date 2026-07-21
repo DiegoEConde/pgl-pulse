@@ -1,19 +1,28 @@
-// componente que organiza el área principal de trabajo
+/**
+ * ============================================================
+ * Workspace
+ * ------------------------------------------------------------
+ * Área principal de trabajo.
+ * ============================================================
+ */
 
 import AlertCenter from "../AlertCenter/AlertCenter";
 
 type WorkspaceProps = {
-  children: React.ReactNode;
+    children: React.ReactNode;
 };
 
-export default function Workspace({ children }: WorkspaceProps) {
-  return (
-    <main className="workspace">
-      <section className="workspace-content">
-        {children}
-      </section>
-
-      <AlertCenter />
-    </main>
-  );
+export default function Workspace({
+    children,
+}: WorkspaceProps) {
+    return (
+        <main className="workspace">
+            <section className="workspace-dashboard">
+                {children}
+            </section>
+            <aside className="workspace-alerts">
+                <AlertCenter />
+            </aside>
+        </main>
+    );
 }

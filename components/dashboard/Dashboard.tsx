@@ -1,64 +1,54 @@
-// pantalla principal del sistema
+/**
+ * ============================================================
+ * Dashboard
+ * ------------------------------------------------------------
+ * Pantalla principal del sistema.
+ *
+ * Muestra el resumen operativo del día y los paneles
+ * principales utilizados por el usuario.
+ * ============================================================
+ */
 
-import Panel from "@/components/ui/Card/Card";
+import StatCard from "@/components/dashboard/StatCard/StatCard";
+import Panel from "@/components/ui/Panel/Panel";
 
 export default function Dashboard() {
-  return (
-    <section className="dashboard">
+    return (
+        <section className="dashboard">
+            <header className="dashboard-header">
+                <h1 className="dashboard-title">
+                    Buen día, Diego.
+                </h1>
+                <span className="dashboard-datetime">
+                    Lunes 20 Jul · 10:42
+                </span>
+            </header>
 
-      <header className="dashboard-header">
+            <hr className="dashboard-divider" />
 
-          <span className="dashboard-greeting">
-              ¡Buen día, este es el resumen de hoy!
-          </span>
+            <section className="dashboard-stats">
+                <StatCard
+                    title="Ventas del día"
+                    value="$ 0"/>
+                <StatCard
+                    title="Compras del día"
+                    value="$ 0"/>
+                <StatCard
+                    title="Ganancias"
+                    value="$ 0"/>
+            </section>
 
-          <span className="dashboard-datetime">
-              Lunes 20 de julio · 10:42
-          </span>
-
-      </header>
-
-      <section className="dashboard-summary">
-
-        <article className="dashboard-card">
-          <h3>Ventas del día</h3>
-          <span>$ 0</span>
-        </article>
-
-        <article className="dashboard-card">
-          <h3>Compras del día</h3>
-          <span>$ 0</span>
-        </article>
-
-        <article className="dashboard-card">
-          <h3>Ganancia del día</h3>
-          <span>$ 0</span>
-        </article>
-
-      </section>
-
-      <section className="dashboard-panels">
-
-        <Panel title="Alertas">
-
-          No hay alertas.
-
-        </Panel>
-
-        <Panel title="Productos en Stock">
-
-          Sin datos.
-
-        </Panel>
-
-        <Panel title="En tránsito">
-
-          Sin datos.
-
-        </Panel>
-
-      </section>
-
-    </section>
-  );
+            <section className="dashboard-panels">
+                <Panel title="Alertas">
+                    Sin datos.
+                </Panel>
+                <Panel title="Stock">
+                    Sin datos.
+                </Panel>
+                <Panel title="En reparto">
+                    Sin datos.
+                </Panel>
+            </section>
+        </section>
+    );
 }

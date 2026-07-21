@@ -1,28 +1,84 @@
-/*BARRA DE NAVEGACIÓN*/
+/* ============================================================
+   NAVEGACIÓN
+   ------------------------------------------------------------
+   Menú principal de la aplicación.
+
+   Se ubica dentro del Header y permite acceder a los módulos
+   principales del sistema.
+============================================================ */
+
+/* ============================================================
+   Contenedor principal
+============================================================ */
+
 .navigation {
-    height: var(--navigation-height);
     display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 2px;
-    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+    gap: 42px;
 }
 
-/*PESTAÑA*/
-.navigation-item {
-    display: flex;
-}
+/* ============================================================
+   Botones
+============================================================ */
 
-/*BOTÓN*/
 .navigation-button {
-    padding: 0 24px;
-    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
     background: transparent;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    letter-spacing: .2px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background var(--transition-fast);
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
 }
+
+/* ============================================================
+   Indicador inferior
+============================================================ */
+
+.navigation-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-accent),
+        transparent
+    );
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-fast);
+}
+
+/* ============================================================
+   Estados
+============================================================ */
 
 .navigation-button:hover {
-    background: #ececec;
+    color: var(--color-text);
+    transform: translateY(-1px);
+}
+
+.navigation-button:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation-button.active {
+    color: var(--color-text);
+}
+
+.navigation-button.active::after {
+    transform: scaleX(1);
 }

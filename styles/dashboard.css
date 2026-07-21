@@ -1,57 +1,68 @@
-/* pantalla principal del dashboard */
+/* ============================================================
+   DASHBOARD
+   ------------------------------------------------------------
+   Pantalla principal del sistema.
+
+   Organiza el encabezado, los indicadores y los paneles
+   operativos del Dashboard.
+============================================================ */
+
+/* ============================================================
+   Contenedor principal
+============================================================ */
 
 .dashboard {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 32px;
+    display:flex;
+    flex-direction:column;
+    gap:var(--space-xl);
+    width:100%;
 }
 
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--color-border);
+/* ============================================================
+   Encabezado
+============================================================ */
+
+.dashboard-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-bottom:var(--space-xl-plus);
 }
 
-.dashboard-greeting {
-    font-size: 18px;
-    font-weight: 600;
+.dashboard-title{
+    font-size:var(--font-size-xl);
+    font-weight:600;
+    line-height:1.2;
+    margin-bottom:var(--space-sm);
 }
 
 .dashboard-datetime {
-    font-size: 14px;
     color: var(--color-text-secondary);
+    font-size: var(--font-size-md);
 }
 
-.dashboard-summary{
-    display:flex;
-    gap:24px;
+.dashboard-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
 }
 
-.dashboard-card {
-    flex: 1;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-medium);
-    background: var(--color-surface);
-    padding: 18px 22px;
+/* ============================================================
+   Indicadores
+============================================================ */
+
+.dashboard-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:var(--space-lg);
+    margin-bottom:var(--space-xl);
 }
 
-.dashboard-card h3 {
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.dashboard-card span {
-    font-size: 26px;
-    font-weight: 700;
-}
+/* ============================================================
+   Paneles
+============================================================ */
 
 .dashboard-panels {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: var(--space-lg);
 }

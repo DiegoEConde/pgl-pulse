@@ -4,8 +4,7 @@
  * ------------------------------------------------------------
  * Contenedor principal de la aplicación.
  *
- * Define la estructura fija utilizada por todo PGL Pulse:
- * Header, Navigation y Workspace.
+ * Define la estructura fija utilizada por todo PGL Pulse.
  *
  * No contiene lógica de negocio.
  * Sólo organiza la interfaz principal.
@@ -14,8 +13,6 @@
 
 // IMPORTACIONES
 import Header from "../Header/Header";
-import Logo from "../Logo/Logo";
-import Navigation from "../Navigation/Navigation";
 import Workspace from "../Workspace/Workspace";
 
 // TIPOS
@@ -27,15 +24,13 @@ type AppShellProps = {
 export default function AppShell({ children }: AppShellProps) {
   return (
     <div className="app-shell">
-      <Header>
-        <Logo />
-      </Header>
 
-      <Navigation />
+      <Header />
 
       <Workspace>
         {children}
       </Workspace>
+
     </div>
   );
 }

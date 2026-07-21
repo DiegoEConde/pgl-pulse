@@ -1,12 +1,34 @@
-/* layout principal del área de trabajo */
+/* ============================================================
+   WORKSPACE
+============================================================ */
 
-.workspace {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
+/* ============================================================
+   Contenedor principal
+============================================================ */
+
+.workspace{
+    display:flex;
+    flex:1;
+    gap:var(--space-xl);
+    padding:var(--space-xl);
+    overflow:hidden;
 }
 
-.workspace-content {
-  flex: 1;
-  overflow: auto;
+/* ============================================================
+   Dashboard
+============================================================ */
+
+.workspace-dashboard{
+    flex:1;
+    overflow-y: auto;
+}
+
+/* ============================================================
+   Panel lateral
+============================================================ */
+
+.workspace-alerts{
+    display:flex;
+    width:var(--alert-center-width);
+    flex-shrink:0;
 }

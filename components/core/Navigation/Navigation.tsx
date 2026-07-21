@@ -1,3 +1,15 @@
+/**
+ * ============================================================
+ * NAVIGATION
+ * ------------------------------------------------------------
+ * Menú principal de navegación de PGL Pulse.
+ *
+ * Genera automáticamente las opciones a partir de la
+ * configuración centralizada.
+ * ============================================================
+ */
+
+// IMPORTACIONES
 import { navigationItems } from "@/config/navigation";
 
 // COMPONENTE
@@ -5,14 +17,9 @@ export default function Navigation() {
     return (
         <nav className="navigation">
             {navigationItems.map((item) => (
-                <div
-                    key={item.id}
-                    className="navigation-item"
-                >
-                    <button className="navigation-button">
-                        {item.label}
-                    </button>
-                </div>
+                <button key={item.id} className="navigation-button">
+                    {item.label}
+                </button>
             ))}
         </nav>
     );
