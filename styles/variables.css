@@ -9,38 +9,39 @@
        COLORES
     ======================================================== */
 
-    /* Fondo principal de la aplicación */
-    --color-background:#0b1220;
+    /* Fondo principal */
+    --color-background: #0B1220;
 
-    /* Superficies (paneles, tarjetas, modales) */
-    --color-surface:#182338;
-    --color-surface-hover:#1F2D47;
+    /* Superficies */
+    --color-surface: #182338;
+    --color-surface-hover: #1F2D47;
 
     /* Bordes */
-    --color-border:rgba(74,138,255,.18);
+    --color-border: rgba(74,138,255,.18);
 
     /* Texto */
-    --color-text:#F4F8FF;
-    --color-text-secondary:#A8B8D4;
+    --color-text: #F4F8FF;
+    --color-text-secondary: #A8B8D4;
 
     /* Colores principales */
-    --color-primary:#2893FF;
-    --color-primary-hover:#46A4FF;
-    --color-primary-active:#197BE5;
+    --color-primary: #2893FF;
+    --color-primary-hover: #46A4FF;
+    --color-primary-active: #197BE5;
 
     /* Color de acento */
-    --color-accent:#2893FF;
+    --color-accent: #2893FF;
 
     /* Estados */
-    --color-success:#2ED47A;
-    --color-warning:#F7B731;
-    --color-danger:#EF4444;
+    --color-success: #2ED47A;
+    --color-warning: #F7B731;
+    --color-danger: #EF4444;
 
     /* ========================================================
        TIPOGRAFÍA
     ======================================================== */
 
     --font-family: inherit;
+
     --font-size-xs: .75rem;
     --font-size-sm: .875rem;
     --font-size-md: 1rem;
@@ -55,12 +56,14 @@
 
     --header-height: 90px;
     --navigation-height: 50px;
+
     --alert-center-width: 320px;
+
     --stat-card-height: 140px;
     --panel-height: 190px;
 
     /* ========================================================
-       BORDES
+       RADIOS
     ======================================================== */
 
     --radius-sm: 6px;
@@ -83,14 +86,13 @@
        SOMBRAS
     ======================================================== */
 
-    /* Sombra general */
     --shadow-default:
         0 10px 30px rgba(0,0,0,.22);
 
-    /* Elevación principal para tarjetas y paneles */
     --shadow-elevation-1:
-        0 6px 18px rgba(0,0,0,.20),
-        0 0 12px rgba(40,147,255,.08);
+        0 0 4px rgba(59,130,246,.08),
+        0 0 10px rgba(59,130,246,.09),
+        0 0 20px rgba(59,130,246,.06);
 
     /* ========================================================
        TRANSICIONES
@@ -98,13 +100,4 @@
 
     --transition-fast: .18s ease;
     --transition-default: .28s ease;
-
-    /* ========================================================
-      Sombras
-    ======================================================== */
-
-    --shadow-elevation-1:
-      0 0 4px rgba(59, 130, 246, 0.08),
-      0 0 10px rgba(59, 130, 246, 0.09),
-      0 0 20px rgba(59, 130, 246, 0.06);
-   }
+}

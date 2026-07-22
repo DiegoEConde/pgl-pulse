@@ -1,20 +1,33 @@
-// encabezado principal de la aplicación
+/**
+ * ============================================================
+ * Header
+ * ------------------------------------------------------------
+ * Barra superior principal de PGL Pulse.
+ *
+ * Contiene:
+ * • Logo del sistema.
+ * • Navegación principal.
+ * ============================================================
+ */
 
 import Logo from "../Logo/Logo";
 import Navigation from "../Navigation/Navigation";
 
 export default function Header() {
-  return (
-    <header className="header">
+    return (
+        <header className="header">
 
-      <div className="header-left">
-        <Logo />
-      </div>
+            {/* ==========================================
+                Identidad visual
+            ========================================== */}
 
-      <div className="header-center">
-        <Navigation />
-      </div>
+            <Logo />
 
-    </header>
-  );
+            {/* ==========================================
+                Navegación principal
+            ========================================== */}
+            <Navigation />
+
+        </header>
+    );
 }

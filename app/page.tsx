@@ -1,10 +1,15 @@
 import AppShell from "@/components/core/AppShell/AppShell";
-import Dashboard from "@/components/dashboard/Dashboard";
+import PageRouter from "@/components/core/PageRouter/PageRouter";
 
+// Página principal de la aplicación.
 export default function HomePage() {
-  return (
-    <AppShell>
-      <Dashboard />
-    </AppShell>
-  );
+
+    return (
+        <AppShell>
+
+            <PageRouter />
+
+        </AppShell>
+    );
+
 }

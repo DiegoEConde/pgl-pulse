@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 
+// Contexto global de la aplicación.
+import { AppProvider } from "@/contexts/AppContext";
+
+// Estilos globales.
 import "@/styles/variables.css";
 import "@/styles/animations.css";
 
@@ -27,6 +31,7 @@ export const metadata: Metadata = {
     description: "Sistema de gestión PGL Pulse",
 };
 
+// Layout principal de la aplicación.
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -35,7 +40,12 @@ export default function RootLayout({
     return (
         <html lang="es" className={ibmPlexSans.className}>
             <body>
-                {children}
+
+                {/* Estado global disponible para toda la aplicación */}
+                <AppProvider>
+                    {children}
+                </AppProvider>
+
             </body>
         </html>
     );

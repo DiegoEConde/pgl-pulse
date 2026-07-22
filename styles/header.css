@@ -3,14 +3,15 @@
    ------------------------------------------------------------
    Barra superior principal de PGL Pulse.
 
-   Contiene el logo institucional y la navegación principal.
+   Contiene:
+   • Logo del sistema.
+   • Navegación principal.
 
-   El diseño mantiene una apariencia limpia y moderna,
-   aportando profundidad sin perder simplicidad.
+   La distribución se realiza únicamente mediante Flexbox.
 ============================================================ */
 
 /* ============================================================
-   Contenedor principal
+   CONTENEDOR PRINCIPAL
 ============================================================ */
 
 .header {
@@ -34,22 +35,21 @@
 }
 
 /* ============================================================
-   Área del logo
+   LOGO
 ============================================================ */
 
-.header-left {
+.header .logo {
     display: flex;
     align-items: center;
-    min-width: 220px;
+    justify-content: flex-start;
+    flex: 0 0 460px;
 }
 
 /* ============================================================
-   Área de navegación
+   NAVEGACIÓN
 ============================================================ */
 
-.header-center {
-    flex: 1;
+.header .navigation {
     display: flex;
-    justify-content: center;
     align-items: center;
 }

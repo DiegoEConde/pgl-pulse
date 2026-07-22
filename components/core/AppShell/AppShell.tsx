@@ -4,33 +4,59 @@
  * ------------------------------------------------------------
  * Contenedor principal de la aplicación.
  *
- * Define la estructura fija utilizada por todo PGL Pulse.
+ * Define la estructura base compartida por todos los módulos.
+ *
+ * Organiza los componentes globales de la interfaz:
+ * - Header
+ * - Workspace
  *
  * No contiene lógica de negocio.
- * Sólo organiza la interfaz principal.
  * ============================================================
  */
 
+// ============================================================
 // IMPORTACIONES
+// ============================================================
+
 import Header from "../Header/Header";
 import Workspace from "../Workspace/Workspace";
 
+// ============================================================
 // TIPOS
+// ============================================================
+
 type AppShellProps = {
-  children: React.ReactNode;
+    children: React.ReactNode;
 };
 
+// ============================================================
 // COMPONENTE
-export default function AppShell({ children }: AppShellProps) {
-  return (
-    <div className="app-shell">
+// ============================================================
 
-      <Header />
+export default function AppShell({
+    children,
+}: AppShellProps) {
 
-      <Workspace>
-        {children}
-      </Workspace>
+    return (
 
-    </div>
-  );
+        <div className="app-shell">
+
+            {/* ==================================================
+                Encabezado principal
+            =================================================== */}
+
+            <Header />
+
+            {/* ==================================================
+                Área principal de trabajo
+            =================================================== */}
+
+            <Workspace>
+                {children}
+            </Workspace>
+
+        </div>
+
+    );
+
 }

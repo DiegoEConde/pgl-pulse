@@ -10,7 +10,17 @@
  * ============================================================
  */
 
-export const navigationItems = [
+import type { NavigationPage } from "@/contexts/AppContext";
+
+// TIPOS
+type NavigationItem = {
+    id: NavigationPage;
+    label: string;
+    path: string;
+};
+
+// CONFIGURACIÓN
+export const navigationItems: NavigationItem[] = [
     {
         id: "inicio",
         label: "Inicio",
