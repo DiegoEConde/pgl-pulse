@@ -20,6 +20,7 @@
 import { useApp } from "@/contexts/AppContext";
 
 import Dashboard from "@/components/dashboard/Dashboard";
+import Datos from "@/components/datos/Datos";
 
 // COMPONENTE
 export default function PageRouter() {
@@ -46,7 +47,7 @@ export default function PageRouter() {
             return <h1>Stock</h1>;
 
         case "datos":
-            return <h1>Datos</h1>;
+            return <Datos />;
 
         case "reportes":
             return <h1>Reportes</h1>;

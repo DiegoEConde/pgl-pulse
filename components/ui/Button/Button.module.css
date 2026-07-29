@@ -1,0 +1,114 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    height: var(--control-height-md);
+    padding: 0 var(--space-lg);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    user-select: none;
+    transition:
+        background var(--transition-default),
+        color var(--transition-default),
+        border-color var(--transition-default),
+        transform var(--transition-fastest),
+        opacity var(--transition-default);
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* Variantes */
+.primary {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    box-shadow: var(--shadow-button);
+}
+
+.primary:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+}
+
+.primary:active:not(:disabled) {
+    filter: brightness(.95);
+}
+
+.secondary {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+
+    border: 1px solid var(--color-border);
+}
+
+.secondary:hover:not(:disabled) {
+    filter: brightness(1.08);
+}
+
+.danger {
+    background: var(--color-danger);
+    color: var(--color-text-light);
+}
+
+.danger:hover:not(:disabled) {
+    filter: brightness(.95);
+}
+
+.ghost {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.ghost:hover:not(:disabled) {
+    background: var(--primary-overlay);
+}
+
+/* Tamaños */
+.sm {
+    height: var(--control-height-sm);
+    padding: 0 var(--space-md);
+    font-size: var(--font-size-xs);
+}
+
+.md {
+    height: var(--control-height-md);
+    padding: 0 var(--space-lg);
+    font-size: var(--font-size-sm);
+}
+
+.lg {
+    height: var(--control-height-lg);
+    padding: 0 var(--space-xl);
+    font-size: var(--font-size-md);
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+/* Iconos */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido */
+.content {
+    display: flex;
+    align-items: center;
+}

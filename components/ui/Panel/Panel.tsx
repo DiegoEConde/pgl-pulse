@@ -1,10 +1,8 @@
-// contenedor reutilizable para secciones de la aplicación
+// Tipos
+import { PanelProps } from "./types";
 
-type PanelProps = {
-    title: string;
-    icon?: React.ReactNode;
-    children: React.ReactNode;
-};
+// Estilos
+import styles from "./Panel.module.css";
 
 export default function Panel({
     title,
@@ -12,17 +10,20 @@ export default function Panel({
     children,
 }: PanelProps) {
     return (
-        <section className="panel">
-            <header className="panel-header">
+        <section className={styles.panel}>
+            <header className={styles.header}>
+
                 {icon && (
-                    <div className="panel-header-icon">
+                    <div className={styles.icon}>
                         {icon}
                     </div>
                 )}
+
                 <h3>{title}</h3>
+
             </header>
 
-            <div className="panel-content">
+            <div className={styles.content}>
                 {children}
             </div>
         </section>
